@@ -15,7 +15,7 @@ namespace PokedexApi.Controllers
         }
 
         [HttpGet("GetPokemons")]
-        public async Task<IActionResult> GetPokemons()
+        public async Task<IActionResult> GetPokemon()
         {
             var result = await _context.Pokemon.Select(x => new Pokemon
             {
