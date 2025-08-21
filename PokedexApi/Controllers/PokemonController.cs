@@ -29,7 +29,7 @@ namespace PokedexApi.Controllers
             return Ok(result);
         }
 
-        [HttpGet("CreatePokemon")]
+        [HttpPost("CreatePokemon")]
         public async Task<IActionResult> CreatePokemon([FromBody] Pokemon pokemon)
         {
             _context.Pokemon.Add(pokemon);
@@ -38,11 +38,11 @@ namespace PokedexApi.Controllers
             return Ok(pokemon);
         }
 
-        [HttpGet("EditPokemon")]
+        [HttpPost("EditPokemon")]
         public async Task<IActionResult> EditPokemon([FromBody] Pokemon pokemon)
         {
             var rows = await _context.Pokemon.Where(x => x.Id == pokemon.Id)
-                .ExecuteUpdateAsync(x => x.SetProperty(x => x.Name, pokemon.Name));
+                .ExecuteUpdateAsync(x => x.SetProperty(x => x.Name, pokemon.Name).SetProperty(x => x.Type, pokemon.Type).SetProperty(x => x.Height, pokemon.Height).SetProperty(x => x.Weight, pokemon.Weight));
 
             return Ok(pokemon);
         }
