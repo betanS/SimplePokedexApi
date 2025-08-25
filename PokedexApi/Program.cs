@@ -1,4 +1,4 @@
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using PokedexApi.Models;
 using System;
 
@@ -22,8 +22,6 @@ builder.Services.AddCors(options =>
 var app = builder.Build();
 
 app.UseCors("AllowAll");
-
-
 
 
 if (app.Environment.IsDevelopment())
