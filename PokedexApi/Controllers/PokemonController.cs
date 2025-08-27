@@ -51,7 +51,7 @@ namespace PokedexApi.Controllers
             return Ok(pokemon);
         }
 
-        [HttpGet("DeletePokemon")]
+        [HttpDelete("DeletePokemon/{id}")]
         public async Task<IActionResult> DeletePokemon(int id)
         {
             var rows = await _context.Pokemon.Where(x => x.Id == id).ExecuteDeleteAsync();
