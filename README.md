@@ -32,7 +32,7 @@ This API is used by the [Pokedex App](https://github.com/tu-usuario/tu-repo-app)
 2. Configure connection string in `appsettings.json` for PostgreSQL.  
 3. Run migrations if needed (`dotnet ef database update`).  
 4. Start the API (`dotnet run`).  
-5. Access Swagger UI at `http://localhost:5000/swagger`.  
+5. Access Swagger UI at `http://localhost:5102/swagger`.  
 
 ---
 
