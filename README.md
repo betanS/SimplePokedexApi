@@ -6,7 +6,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)  
 
 A simple **ASP.NET Core Web API** for managing Pokémon data, connected to a **PostgreSQL database** and documented with **Swagger**.  
-This API is used by the [Pokedex App](https://github.com/tu-usuario/tu-repo-app).  
+This API is used by the [Pokedex App](https://github.com/betanS/PokedexRetrofit).  
 
 ---
 
